@@ -1,9 +1,9 @@
-# BurgerShop
+# Burger Shop
 
 **Loftschool** - Level 2
 
-**Training Project:** BurgerShop
+**Training Project:** Burger Shop
 
 **Description:** SCSS, Adaptive, Js, Gulp
 
-**GitHub Pages:** [burgers-loftschool](https://baradatbiu.github.io/burgerShop-loftschool/)
+**GitHub Pages:** [burgershop](https://baradatbiu.github.io/burgershop/)
