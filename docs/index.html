@@ -827,40 +827,40 @@
         <div class="container">
 
           <h2 class="section-title section-title--center section-title--big-margin">Закажите доставку</h2>
-          <form class="form" action="">
+          <form class="form" action="server.php" method="POST" id="order-form">
             <div class="form__col">
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__block-title">Имя</span>
-                  <input type="text" name="name" class="form__input">
+                  <input type="text" name="name" class="form__input" required>
                 </label>
                 <label class="form__block">
                   <span class="form__block-title">Телефон</span>
-                  <input type="text" name="phone" class="form__input" placeholder="89212264923">
+                  <input type="text" name="phone" class="form__input" placeholder="89212264923" required>
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__block-title">Улица</span>
-                  <input type="text" name="street" class="form__input">
+                  <input type="text" name="street" class="form__input" required>
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__block-title">Дом</span>
-                  <input type="text" name="house" class="form__input">
+                  <input type="number" name="house" class="form__input" required>
                 </label>
                 <label class="form__block">
                   <span class="form__block-title">Корпус</span>
-                  <input type="text" name="corp" class="form__input">
+                  <input type="number" name="corp" class="form__input" required>
                 </label>
                 <label class="form__block">
                   <span class="form__block-title">Квартира</span>
-                  <input type="text" name="flat" class="form__input">
+                  <input type="number" name="flat" class="form__input" required>
                 </label>
                 <label class="form__block">
                   <span class="form__block-title">Этаж</span>
-                  <input type="text" name="floor" class="form__input">
+                  <input type="number" name="floor" class="form__input" required>
                 </label>
               </div>
             </div>
@@ -868,32 +868,32 @@
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__block-title">Комментарий</span>
-                  <textarea name="comment" class="form__input form__input--textarea"></textarea>
+                  <textarea name="comment" class="form__input form__input--textarea" required></textarea>
                 </label>
               </div>
               <div class="form__buttons">
                 <div class="form__row">
                   <label class="form__radio">
-                    <input class="form__radio-input" type="radio" name="payment">
+                    <input class="form__radio-input" type="radio" name="payment" value="cash">
                     <div class="form__radio-fake"></div>
                     <span class="form__block-title form__block-title--buttons">Потребуется здача</span>
                   </label>
                   <label class="form__radio">
-                    <input class="form__radio-input" type="radio" name="payment" checked>
+                    <input class="form__radio-input" type="radio" name="payment" value="card" checked>
                     <div class="form__radio-fake"></div>
                     <span class="form__block-title form__block-title--buttons">Оплата по карте</span>
                   </label>
                 </div>
                 <div class="form__row">
                   <label class="form__checkbox">
-                    <input type="checkbox" name="callback" class="form__checkbox-input">
+                    <input type="checkbox" name="callback" class="form__checkbox-input" value="1">
                     <div class="form__checkbox-fake"></div>
                     <span class="form__block-title form__block-title--buttons">Не перезванивать</span>
                   </label>
                 </div>
                 <div class="form__row">
-                  <button type="submit" class="btn form__btn-submit" value="">Заказать</button>
-                  <button type="reset" class="btn form__btn-reset" value="">Очистить</button>
+                  <button type="submit" class="btn form__btn-submit">Заказать</button>
+                  <button type="reset" class="btn form__btn-reset">Очистить</button>
                 </div>
               </div>
             </div>
@@ -1030,17 +1030,16 @@
   </div>
 
   <template id="overlay">
-    <div class="review__open">
-      <div class="review__window">
-        <h5 class="review__head-hide"></h5>
-        <div class="review__text-hide"><p></p></div>
-        <a href="#" id="review-close" class="modal__close"></a>
+    <div class="popup__open">
+      <div class="popup__window">
+        <h5 class="popup__head"></h5>
+        <div class="popup__text"><p></p></div>
+        <a href="#" id="popup-close" class="modal__close"></a>
       </div>
     </div>
   </template>
-
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH3x6QxA82or9jW_ELwb62Ai3J6UprPuI"></script>
   <script src="js/main.min.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH3x6QxA82or9jW_ELwb62Ai3J6UprPuI&callback=initMap"></script>
-
 </body>
 </html>
